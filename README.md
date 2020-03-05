@@ -1,3 +1,6 @@
+# A small React Catalogue application
+
+A small and simple ReactJS application that fetches data from Githubs API. Displays data, and offers search fetaures.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
