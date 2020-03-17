@@ -1,9 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Spinner from '../layout/Spinner';
+import PropTypes from 'prop-types';
+import { Link}  from 'react-router-dom';
 
 export class User extends Component {
   componentDidMount() {
     this.props.getUser(this.props.match.params.login);
   }
+
+  static propTypes = {
+    loading: PropTypes.bool,
+    user: PropTypes.bool.isRequired,
+    getUser: PropTypes.func.isRequired
+  }
+
   render() {
     const {
       name,
@@ -20,13 +30,14 @@ export class User extends Component {
     } = this.props.user;
 
     const { loading } = this.props;
+
+    if (loading) return <Spinner />
+
     return (
-      <div>
-        <h1>USER PAGE</h1>
-        <ul>
-          <li>{name}</li>
-        </ul>
-      </div>
+      <Fragment>
+        <Link to='/' className='btn btn-light'>Go back</Link>
+
+      </Fragment>
     );
   }
 }
