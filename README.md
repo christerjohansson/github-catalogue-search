@@ -1,7 +1,25 @@
-# A small React Catalogue application
+# A small Github Catalogue application
 
-A small and simple ReactJS application that fetches data from Githubs API. Displays data, and offers search fetaures.
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small and simple application, based on ReactJS,that fetches data from Githubs API. Displays data, and offers search fetaures. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Features
+- Displays members internal ID on Github
+- Shows wether profile is hireable or not
+- Displays top 10 repos of developers account
+- Shows number of followed/following users
+- Shows number of public repos and gists
+- Shows date when member joined, and when last active
+- Displays members Bio if there is one
+- Displays Username, website URL and company name if present
+
+## Screenshot
+![Screenshot of webpage](./src/img/screenshot_1.png)
+
+## Prop drilling
+Version 1.0 uses a technique called [*prop drilling (or threading)*](https://kentcdodds.com/blog/prop-drilling), which is something is something I used to get the app up and running. Later versions is refactored towards not using this method.
+
+## Prop drilling schema
+![Prop drilling schema](./src/img/app-drilling.png)
 
 ## Available Scripts
 
