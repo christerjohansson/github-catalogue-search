@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import axios from 'axios';
 import GithubContext from './githubContext';
-import GitubReducer from './githubReducer';
+import GithubReducer from './githubReducer';
 import {
     SEARCH_USERS,
     SET_LOADING,
@@ -17,7 +17,7 @@ const GithubState = props => {
         repos: [],
         loading: false
     }
-    const [state, dispatch] = useReducer(GitubReducer, initialState);
+    const [state, dispatch] = useReducer(GithubReducer, initialState);
 
 // Searching users in the catalogue by
 // asking API through props and component
@@ -36,16 +36,15 @@ const GithubState = props => {
     });
   };
 
-
 // Get User
 
 // Get Repos
 
-// Clears Users
-
+  // Reset form and clear state from data
+  const clearUsers = () => dispatch({type: CLEAR_USERS});
 
 // Set Loading
-const setLoading= () => dispatch({type: SET_LOADING});
+const setLoading = () => dispatch({type: SET_LOADING});
 
     return <GithubContext.Provider
     value={{
@@ -53,7 +52,8 @@ const setLoading= () => dispatch({type: SET_LOADING});
         user: state.user,
         repos: state.repos,
         loading: state.loading,
-        searchUsers
+        searchUsers,
+        clearUsers
     }}
     >
     

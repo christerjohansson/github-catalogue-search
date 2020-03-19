@@ -60,12 +60,6 @@ const App = () => {
     setLoading(false);
   };
 
-  // Reset form and clear state from data
-  const clearUsers = () => {
-    setUsers([]);
-    setLoading(false);
-  };
-
   // Give warning when user enter no data in search field.
   const displayAlert = (msg, type) => {
     setAlert({ msg, type });
@@ -86,11 +80,9 @@ const App = () => {
               render={props => (
                 <Fragment>
                   <Search
-                    clearUsers={clearUsers}
-                    showClear={users.length > 0 ? true : false}
                     setAlert={displayAlert}
                   />
-                  <Users loading={loading} users={users} />
+                  <Users />
                 </Fragment>
               )}
             />
