@@ -11,8 +11,6 @@ import GithubState from './context/github/GithubState';
 import "./App.css";
 
 const App = () => {
-  const [users, setUsers] = useState([]);
-  const [user, setUser] = useState({});
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
@@ -30,23 +28,7 @@ const App = () => {
   //   this.setState({ users: res.data, loading: false });
   // }
 
- 
-
-  // Locate a single user on Github
-  const getUser = async login => {
-    setLoading(true);
-
-    const res = await axios.get(
-      `https://api.github.com/users/${login}?client_id=$
-      {process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=$
-      {process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
-    );
-
-    setUser(res.data);
-    setLoading(false);
-  };
-
-  // List users repos
+   // List users repos
   const getUserRepos = async login => {
     setLoading(true);
 
@@ -93,11 +75,8 @@ const App = () => {
               render={props => (
                 <User
                   {...props}
-                  getUser={getUser}
                   getUserRepos={getUserRepos}
-                  user={user}
                   repos={repos}
-                  loading={loading}
                 />
               )}
             />
