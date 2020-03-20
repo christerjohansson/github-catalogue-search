@@ -52,7 +52,21 @@ const getUser = async login => {
   });
 };
 
-// Get Repos
+// List users repos
+const getUserRepos = async login => {
+  setLoading();
+
+  const res = await axios.get(
+    `https://api.github.com/users/${login}/repos?per_page=10&sort=created:asc&client_id=$
+    {process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=$
+    {process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+  );
+  
+dispatch({
+  type: GET_REPOS,
+  payload: res.data
+})
+};
 
   // Reset form and clear state from data
   const clearUsers = () => dispatch({type: CLEAR_USERS});
@@ -68,7 +82,8 @@ const setLoading = () => dispatch({type: SET_LOADING});
         loading: state.loading,
         searchUsers,
         clearUsers,
-        getUser
+        getUser,
+        getUserRepos
     }}
     >
     

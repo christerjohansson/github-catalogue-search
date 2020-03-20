@@ -6,13 +6,10 @@ import User from "./components/users/User";
 import Search from "./components/users/Search";
 import Alert from "./components/layout/Alert";
 import About from "./components/pages/About";
-import axios from "axios";
 import GithubState from './context/github/GithubState';
 import "./App.css";
 
 const App = () => {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
 
   /*This API call requires API-keys to be stored in your .env.local file.
@@ -28,19 +25,7 @@ const App = () => {
   //   this.setState({ users: res.data, loading: false });
   // }
 
-   // List users repos
-  const getUserRepos = async login => {
-    setLoading(true);
-
-    const res = await axios.get(
-      `https://api.github.com/users/${login}/repos?per_page=10&sort=created:asc&client_id=$
-      {process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=$
-      {process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
-    );
-
-    setRepos(res.data);
-    setLoading(false);
-  };
+   
 
   // Give warning when user enter no data in search field.
   const displayAlert = (msg, type) => {
@@ -69,15 +54,7 @@ const App = () => {
               )}
             />
             <Route exact path="/about" component={About} />
-            <Route
-              exact
-              path="/user/:login"
-              render={props => (
-                <User
-                  {...props}
-                  getUserRepos={getUserRepos}
-                  repos={repos}
-                />
+            <Route exact path="/user/:login" component={User} />
               )}
             />
           </Switch>
