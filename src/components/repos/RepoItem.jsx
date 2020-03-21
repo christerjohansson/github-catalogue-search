@@ -4,11 +4,12 @@ import PropTypes from 'prop-types'
 const DATE_OPTIONS = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 
 export const RepoItem = ({ repo }) => {
-    return (
+      return (
         <Fragment>
         <div className="card grid-3">
             <h3>
-            <i className="fab fa-github" /> | <a href={repo.html_url}>{repo.name}</a>
+            <i className="fab fa-github" /> | 
+            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
             </h3>
             <p>Description: {repo.description}</p>
             <ul>
