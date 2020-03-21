@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.dbd16520.chunk.css",
-    "main.js": "/static/js/main.c4c096bf.chunk.js",
-    "main.js.map": "/static/js/main.c4c096bf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.6fde0392.js",
-    "runtime-main.js.map": "/static/js/runtime-main.6fde0392.js.map",
-    "static/js/2.782e7b77.chunk.js": "/static/js/2.782e7b77.chunk.js",
-    "static/js/2.782e7b77.chunk.js.map": "/static/js/2.782e7b77.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.8a65e99b9ca86bcde622b7a041b498f8.js": "/precache-manifest.8a65e99b9ca86bcde622b7a041b498f8.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.dbd16520.chunk.css.map": "/static/css/main.dbd16520.chunk.css.map",
-    "static/js/2.782e7b77.chunk.js.LICENSE.txt": "/static/js/2.782e7b77.chunk.js.LICENSE.txt",
-    "static/media/831.gif": "/static/media/831.5051e951.gif"
+    "main.css": "/github-catalogue-search/index.html/static/css/main.dbd16520.chunk.css",
+    "main.js": "/github-catalogue-search/index.html/static/js/main.df619ba6.chunk.js",
+    "main.js.map": "/github-catalogue-search/index.html/static/js/main.df619ba6.chunk.js.map",
+    "runtime-main.js": "/github-catalogue-search/index.html/static/js/runtime-main.c7fafe80.js",
+    "runtime-main.js.map": "/github-catalogue-search/index.html/static/js/runtime-main.c7fafe80.js.map",
+    "static/js/2.782e7b77.chunk.js": "/github-catalogue-search/index.html/static/js/2.782e7b77.chunk.js",
+    "static/js/2.782e7b77.chunk.js.map": "/github-catalogue-search/index.html/static/js/2.782e7b77.chunk.js.map",
+    "index.html": "/github-catalogue-search/index.html/index.html",
+    "precache-manifest.137b5f107029b55f31fbb1f37e59fbea.js": "/github-catalogue-search/index.html/precache-manifest.137b5f107029b55f31fbb1f37e59fbea.js",
+    "service-worker.js": "/github-catalogue-search/index.html/service-worker.js",
+    "static/css/main.dbd16520.chunk.css.map": "/github-catalogue-search/index.html/static/css/main.dbd16520.chunk.css.map",
+    "static/js/2.782e7b77.chunk.js.LICENSE.txt": "/github-catalogue-search/index.html/static/js/2.782e7b77.chunk.js.LICENSE.txt",
+    "static/media/831.gif": "/github-catalogue-search/index.html/static/media/831.5051e951.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.6fde0392.js",
+    "static/js/runtime-main.c7fafe80.js",
     "static/js/2.782e7b77.chunk.js",
     "static/css/main.dbd16520.chunk.css",
-    "static/js/main.c4c096bf.chunk.js"
+    "static/js/main.df619ba6.chunk.js"
   ]
 }
